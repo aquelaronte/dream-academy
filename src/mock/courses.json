@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "cover": "https://www.auros.com.co/wp-content/uploads/2019/02/Tipos-de-cursos.jpg",
+    "title": "Python para principiantes de cero a master",
+    "description": "Aprende python donde empezamos desde cero creando aplicaciones mas sencillas hasta master con una aplicación de nivel avanzado",
+    "author": "Pablo Diego Smith Johnson",
+    "toLearn": [
+      "Aprenderás a manejar programas desde cero",
+      "Controla los entornos de desarrollo para python con jetbrains usando pycharm community edition",
+      "Útil para el desarrollo de infraestructura"
+    ],
+    "date": "enero de 2023",
+    "suscribed": true
+  },
+  {
+    "id": 2,
+    "cover": "https://www.auros.com.co/wp-content/uploads/2019/02/Tipos-de-cursos.jpg",
+    "title": "C# para principiantes",
+    "description": "Aprende los conceeptos basicos de C#. ¡impresiona a tus amigos!",
+    "author": "José Friedrich Muñoz",
+    "toLearn": [
+      "Aprenderás a controlar el pulso",
+      "Vas a hacer trazos simples y uniformes",
+      "Verás el dibujo desde una nueva perspectiva"
+    ],
+    "date": "febrero de 2022",
+    "suscribed": false
+  },
+  {
+    "id": 3,
+    "cover": "https://www.auros.com.co/wp-content/uploads/2019/02/Tipos-de-cursos.jpg",
+    "title": "Guitarra acústica sencilla",
+    "description": "Explora la composición melódica en guitarra y comprende la música de manera distinta",
+    "author": "Richard Colón Ruiz",
+    "toLearn": [
+      "Aprende a leer partituras",
+      "Obtén desempeño alto en formación de acordes",
+      "Escucharás la música de forma más apasionante"
+    ],
+    "date": "noviembre de 2022",
+    "suscribed": false
+  },
+  {
+    "id": 4,
+    "cover": "https://www.auros.com.co/wp-content/uploads/2019/02/Tipos-de-cursos.jpg",
+    "title": "Excel avanzado a profesional",
+    "description": "Veremos en este curso como desarrollar hojas de cálculo de mejor calidad",
+    "author": "Paula Rodriguez Quintero",
+    "toLearn": [
+      "Aumentarás tus posibilidades de conseguir trabajo",
+      "Te familiarizarás mas con los macros en excel",
+      "Aprenderás a gestionar un inventario sencillo"
+    ],
+    "date": "junio de 2023",
+    "suscribed": false
+  },
+  {
+    "id": 5,
+    "cover": "https://www.auros.com.co/wp-content/uploads/2019/02/Tipos-de-cursos.jpg",
+    "title": "Se un experto en java, curso desde cero con springboot",
+    "description": "Crea programas sencillos y complejos usando springboot en java desde cero a experto",
+    "author": "Luz Elena Root Hernandez",
+    "toLearn": [
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet"
+    ],
+    "date": "diciembre de 2022",
+    "suscribed": false
+  },
+  {
+    "id": 6,
+    "cover": "https://www.auros.com.co/wp-content/uploads/2019/02/Tipos-de-cursos.jpg",
+    "title": "Lorem ipsum dolor sit amet",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illum asperiores in odit error, aperiam, vel, rem temporibus quidem itaque necessitatibus quis.",
+    "author": "Dolor sit amet consecteur dis aforis",
+    "toLearn": [
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet consecteur elit illum asperiores in odit adispisicing elit",
+      "Eaque illum asperioresrem tempribus quidem itaque necessitatibus dolor ipsum lorem ipsum dolor sit amet consecteur adispisicing elit"
+    ],
+    "date": "agosto de 2022",
+    "suscribed": false
+  },
+  {
+    "id": 7,
+    "cover": "https://www.auros.com.co/wp-content/uploads/2019/02/Tipos-de-cursos.jpg",
+    "title": "Python para principiantes de cero a master",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illum asperiores in odit error, aperiam, vel, rem temporibus quidem itaque necessitatibus quis.",
+    "author": "Dolor sit amet consecteur dis aforis",
+    "toLearn": [
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet consecteur elit illum asperiores in odit adispisicing elit",
+      "Eaque illum asperioresrem tempribus quidem itaque necessitatibus dolor ipsum lorem ipsum dolor sit amet consecteur adispisicing elit"
+    ],
+    "date": "septiembre de 2022",
+    "suscribed": false
+  },
+  {
+    "id": 8,
+    "cover": "https://www.auros.com.co/wp-content/uploads/2019/02/Tipos-de-cursos.jpg",
+    "title": "Python para principiantes de cero a master",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illum asperiores in odit error, aperiam, vel, rem temporibus quidem itaque necessitatibus quis.",
+    "author": "Dolor sit amet consecteur dis aforis",
+    "toLearn": [
+      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet consecteur elit illum asperiores in odit adispisicing elit",
+      "Eaque illum asperioresrem tempribus quidem itaque necessitatibus dolor ipsum lorem ipsum dolor sit amet consecteur adispisicing elit"
+    ],
+    "date": "marzo de 2023",
+    "suscribed": false
+  }
+]

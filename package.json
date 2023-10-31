@@ -1,0 +1,30 @@
+{
+  "name": "dream-academy",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/jsonwebtoken": "^9.0.3",
+    "@types/uuid": "^9.0.5",
+    "nuxt": "^3.7.4",
+    "vuetify-nuxt-module": "^0.5.7"
+  },
+  "overrides": {
+    "vue": "latest"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "@supabase/supabase-js": "^2.33.2",
+    "axios": "^1.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "pinia": "^2.1.6",
+    "uuid": "^9.0.1",
+    "vue-advanced-cropper": "^2.8.8"
+  }
+}
