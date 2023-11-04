@@ -21,12 +21,14 @@
     </v-tooltip>
     <v-tooltip text="Nuevo item">
       <template v-slot:activator="{ props }">
-        <v-btn
-          icon="mdi-note"
-          color="green-lighten-1"
-          class="mb-3"
-          v-bind="props"
-        ></v-btn>
+        <NuxtLink to="/courses/add-item">
+          <v-btn
+            icon="mdi-note"
+            color="green-lighten-1"
+            class="mb-3"
+            v-bind="props"
+          ></v-btn>
+        </NuxtLink>
       </template>
     </v-tooltip>
     <v-tooltip text="Nuevo curso">

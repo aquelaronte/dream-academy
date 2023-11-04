@@ -13,6 +13,7 @@ const useUserStore = defineStore("user", () => {
     name: "",
     role: "",
     email: "",
+    profile_photo: "",
   };
 
   let isUserloged: boolean = false;

@@ -4,7 +4,7 @@ import { resolve } from "path";
 export default defineNuxtConfig({
   devtools: { enabled: false },
   srcDir: resolve("./src"),
-  serverDir: resolve('./server'),
+  serverDir: resolve("./server"),
   modules: ["@pinia/nuxt", "vuetify-nuxt-module"],
   app: {
     head: {

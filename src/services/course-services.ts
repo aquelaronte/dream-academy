@@ -47,9 +47,7 @@ export default class CourseServices {
     return data;
   }
 
-  public async getCourseById(
-    courseId: number | string
-  ) {
+  public async getCourseById(courseId: number | string) {
     const { data } = await axios.get(
       `/api/courses/with-id/?courseId=${courseId}`
     );
@@ -60,10 +58,30 @@ export default class CourseServices {
   public async getUserCourse(
     courseId: number | string,
     userId: number | string
-  ){
+  ) {
     const { data } = await axios.get(
       `/api/courses/user-course/?courseId=${courseId}&userId=${userId}`
     );
+
+    return data;
+  }
+
+  public async saveItem(
+    course_id: string,
+    file: File,
+    name: string,
+    description: string
+  ) {
+    const formData = new FormData();
+    formData.append("course_id", course_id);
+    formData.append("file", file);
+    formData.append("name", name);
+    formData.append("description", description);
+
+    const { data } = await useFetch("/api/items", {
+      method: "post",
+      body: formData,
+    });
 
     return data;
   }

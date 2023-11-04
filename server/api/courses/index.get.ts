@@ -19,10 +19,16 @@ export default eventHandler(async (event) => {
     const coverUrl = supabaseClient.storage
       .from("courses-covers")
       .getPublicUrl(course.coverUrl);
+      
+    let authorName = ""
+
+    if(course.users){
+      authorName = course.users.name
+    }
 
     response.push({
       id: course.id,
-      author: course.users.name,
+      author: authorName,
       coverUrl: course.coverUrl,
       cover: coverUrl.data.publicUrl,
       title: course.title,

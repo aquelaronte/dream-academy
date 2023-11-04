@@ -1,3 +1,4 @@
+import UserModel from "~/models/userModel";
 import supabaseClient from "~~/server/supabaseClient";
 
 export default eventHandler(async (event) => {
@@ -23,11 +24,14 @@ export default eventHandler(async (event) => {
   const user = userData.data[0];
   const auth = userAuth.data.user
 
-  return {
+  const profilePhotoUrl = supabaseClient.storage.from('users-profile').getPublicUrl('default.png');
+
+  return <UserModel>{
     id: user.id,
     id_auth: auth.id,
     name: user.name,
     role: user.role,
-    email: user.email
+    email: user.email,
+    profile_photo: profilePhotoUrl.data.publicUrl
   }
 });

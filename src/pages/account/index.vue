@@ -4,7 +4,7 @@
       <v-row style="margin-top: 110px">
         <v-col cols="auto">
           <v-avatar
-            image="https://media.gq.com.mx/photos/609c0fdeee4372271f0b9056/16:9/w_2560%2Cc_limit/salir%2520guapo%2520en%2520fotos-605380757.jpg"
+            :image="userStore.userData.profile_photo"
             size="80"
             style="border: 3px solid black"
             class="bg-white"
@@ -24,7 +24,7 @@
   <v-container class="mt-8">
     <v-row>
       <v-col>
-        <h2>Cursos creados</h2>
+        <h2>Mis cursos</h2>
       </v-col>
     </v-row>
     <v-row>
@@ -35,7 +35,7 @@
             v-for="course in ownCourses"
             :key="course.id"
             class="course-card"
-            @click="() => router.push(`courses/${course.id}`)"
+            @click="() => router.push(`/courses/${course.id}`)"
           >
             <v-img :src="course.coverUrl" height="200px" cover></v-img>
             <v-card-title>

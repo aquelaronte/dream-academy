@@ -34,7 +34,7 @@
               <v-list-item>
                 <v-container>
                   <v-row class="d-flex justify-center">
-                    <v-avatar icon="mdi-account"></v-avatar>
+                    <v-avatar :image="userStore.userData.profile_photo"></v-avatar>
                   </v-row>
                   <v-row class="d-flex justify-center">
                     <small>
@@ -105,6 +105,7 @@ function closeSession() {
     name: "",
     role: "",
     email: "",
+    profile_photo: "",
   };
   localStorage.removeItem("jwt");
   userStore.isUserloged = false;

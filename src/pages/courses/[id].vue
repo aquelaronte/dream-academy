@@ -1,13 +1,14 @@
 <template>
   <v-img :src="courseData.cover" cover height="300px"></v-img>
-  <v-container>
+  <v-container style="margin-bottom: 200px;">
     <v-row>
       <v-col> </v-col>
     </v-row>
     <v-row>
       <v-col>
         <h1>{{ courseData.title }}</h1>
-        <p class="text-subtitle-1">Por {{ courseData.author }}</p>
+        <p class="text-subtitle-1" v-if="courseData.id_author">Por {{ courseData.author }}</p>
+        <p class="text-subtitle-1" v-if="courseData.id && !courseData.id_author">Por <span style="color: tomato;">usuario borrado</span></p>
         <p class="font-italic text-body-2">Creado en {{ courseData.date }}</p>
       </v-col>
     </v-row>
@@ -53,12 +54,36 @@
         </v-list>
       </v-col>
     </v-row>
+    <v-row>
+      <v-col>
+        <h3>Cursos</h3>
+        <span v-if="typeof courseData.items == 'string'">{{ courseData.items }}</span>
+        <span v-if="!(typeof courseData.items == 'string')"></span>
+      </v-col>
+    </v-row>
+    <v-row v-if="courseData.id_author == userStore.userData.id">
+      <v-col>
+        <v-btn color="green-accent-1" class="w-100 h-100">
+          <v-container>
+            <v-row>
+              <v-col>
+                <v-icon icon="mdi-plus" style="font-size: 50px;"></v-icon>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <p>Añade un item</p>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script setup lang="ts">
 import useUserStore from "~/contexts/userStore";
-import CourseModel from "~/models/courseModel";
 import CourseServices from "~/services/course-services";
 import UserServices from "~/services/user-services";
 
@@ -117,6 +142,11 @@ async function handleUnsubscribe() {
   }
 }
 
+onBeforeUnmount(() => {
+  userCourseData.value = {}
+  courseData.value = {}
+})
+
 onBeforeMount(async () => {
   userCourseData.value = {};
   courseData.value = {};
@@ -128,5 +158,8 @@ onBeforeMount(async () => {
   }
   const data = await services.getCourseById(courseId as string);
   courseData.value = data;
+
+  console.log(data);
+  
 });
 </script>
