@@ -57,3 +57,33 @@ Verifica que tienes instaladas estas dependencias:
 # o si usas yarn corre < yarn run dev >
 npm run dev
 ```
+
+### Directorios del proyecto
+
+El proyecto cuenta con los siguientes directorios:
+
+* `/src`: contiene todo el código de vue que se renderiza en el lado del cliente
+
+* `/server`: contiene todo el codigo de typescript que maneja el API
+
+* `/`: contiene todos los archivos de configuración
+
+* `/src/services`: contiene todo los métodos que hacen consultas al API
+
+* `/src/public`: tiene todas las imágenes públicas y assets disponibles para todos los usuarios con su propio endpoint
+
+* `/src/pages`: contiene todos los endpoints frontend de la página donde cada archivo .vue representa la vista de dicha ruta
+
+* `/src/models`: contiene los modelos e interfaces que representan los datos que llegan desde el API
+
+* `/src/mock`: contiene datos mock o datos de prueba
+
+* `/src/layouts`: contiene los layouts donde se renderizan los componentes por partes
+
+* `/src/contexts`: contiene las variables de uso global propios de la store que provee la librería "pinia"
+
+* `/src/components`: contiene todos los componentes globales de la página
+
+* `/src/assets`: contiene todas las imágenes privadas sin acceso a su propio endpoint
+
+* `/server/api`: contiene todos los endpoint del API donde cada archivo representa una ruta del API
