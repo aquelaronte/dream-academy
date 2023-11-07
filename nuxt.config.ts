@@ -15,6 +15,6 @@ export default defineNuxtConfig({
         },
       ],
       title: "Dream Academy",
-    },
+    }
   },
 });

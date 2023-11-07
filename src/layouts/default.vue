@@ -73,4 +73,5 @@ onBeforeMount(async () => {
 });
 </script>
 
-<style></style>
+<style>
+</style>

@@ -85,4 +85,15 @@ export default class CourseServices {
 
     return data;
   }
+
+  public async deleteItem(
+    itemId: string
+  ) {
+    const { data } = await useFetch('/api/items', {
+      method: 'delete',
+      body: { itemId }
+    })
+
+    return data;
+  }
 }

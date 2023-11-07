@@ -46,14 +46,3 @@ export default eventHandler(async (event) => {
 
   return true;
 });
-
-function buffering(file: ArrayBuffer): Promise<Buffer> {
-  return new Promise((resolve, reject) => {
-    try {
-      const buffer = Buffer.from(file);
-      resolve(buffer);
-    } catch (e) {
-      reject(e);
-    }
-  });
-}

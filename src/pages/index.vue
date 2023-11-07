@@ -40,13 +40,8 @@
     </v-row>
     <v-row>
       <span class="courses-organizer">
-        <v-card
-          max-width="400"
-          v-for="course in courses"
-          :key="course.id"
-          class="course-card"
-          @click="() => router.push(`courses/${course.id}`)"
-        >
+        <v-card max-width="400" v-for="course in courses" :key="course.id" class="course-card"
+          @click="() => router.push(`courses/${course.id}`)">
           <v-img :src="course.cover" height="200px" cover></v-img>
           <v-card-title>
             {{ course.title }}
@@ -64,7 +59,6 @@
 </template>
 
 <script setup lang="ts">
-import mockCourses from "@/mock/courses.json";
 import courseModel from "@/models/courseModel";
 import CourseServices from "~/services/course-services";
 

@@ -9,10 +9,10 @@ export default eventHandler(async (event) => {
     .eq("id", courseId);
 
   if (courseError) {
-    return courseError.message ;
+    return courseError.message;
   }
 
-  
+
 
   const { data: authorData, error: authorError } = await supabaseClient
     .from("users")
@@ -24,34 +24,44 @@ export default eventHandler(async (event) => {
   const coverUrl = supabaseClient.storage
     .from("courses-covers")
     .getPublicUrl(course.coverUrl);
-  
+
   let authorName = ""
 
-  if(authorData && authorData.length > 0){
+  if (authorData && authorData.length > 0) {
     authorName = authorData[0].name
   }
 
   const items = await getCourseItems(course.id)
+
+  let itemsWithURL : any[] = [];
+
+  if (Array.isArray(items)) {
+    items.forEach(item => {
+      const url = supabaseClient.storage.from('items-files').getPublicUrl(item.contentUrl);
+
+      itemsWithURL.push({ ...item, contentUrl: url.data.publicUrl })
+    })
+  }
 
   const response = {
     ...course,
     cover: coverUrl.data.publicUrl,
     toLearn: JSON.parse(course.toLearn),
     author: authorName,
-    items: items
+    items: itemsWithURL
   };
 
   return response;
 });
 
-async function getCourseItems(courseId : string){
+async function getCourseItems(courseId: string) {
   const { data: itemsData, error: itemsError } = await supabaseClient.from('items').select().eq('id_course', courseId);
 
-  if(itemsError){
+  if (itemsError) {
     return itemsError.message;
   }
 
-  if(itemsData.length > 0){
+  if (itemsData.length > 0) {
     return itemsData
   } else {
     return "Este curso está vacío"
