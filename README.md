@@ -1,7 +1,7 @@
 # Dream Academy
 
 [![Dream Academy](https://img.shields.io/badge/Dream_Academy-Vis%C3%ADtanos-blue)](https://dream-academy.vercel.app/)
-[![Dream Academy](https://img.shields.io/badge/Versión-Alpha-red)](https://dream-academy.vercel.app/)
+[![Dream Academy](https://img.shields.io/badge/Versión-Pre_Alpha-red)](https://dream-academy.vercel.app/)
 
 Este es el repositorio principal de Dream Academy. Contiene el código de frontend, el código de backend, documentación de uso y documentación técnica
 
