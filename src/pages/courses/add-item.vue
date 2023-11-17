@@ -180,7 +180,7 @@ async function saveItem() {
     console.log(data);
     overlay.value = false
     dialogState.value = false
-    router.push('/')
+    // router.push('/')
   }
 }
 

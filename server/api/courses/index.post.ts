@@ -15,6 +15,10 @@ export default eventHandler(async (event) => {
     .from("courses-covers")
     .upload(`cover-${v4()}`, coverFile!);
 
+  if(data.error){
+    return data.error;
+  }
+
   const { data: courseData, error: courseError } = await supabaseClient
     .from("courses")
     .insert({

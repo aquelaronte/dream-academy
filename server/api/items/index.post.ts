@@ -14,7 +14,7 @@ export default eventHandler(async (event) => {
     .upload(`${v4()}-${file!.name}`, file);
 
   if (fileError) {
-    return fileError.message;
+    return { fileError };
   }
   
   const { data: itemData, error: itemError } = await supabaseClient
@@ -28,7 +28,7 @@ export default eventHandler(async (event) => {
     });
 
   if (itemError) {
-    return itemError.message;
+    return { itemError };
   }
 
   return true;
